@@ -1,3 +1,12 @@
+// Author: Sheng Wei
+// File Name: postfixCal.h
+// File Description: Header File contains prototypes of postfixCal func
+// Function.
+//
+//
+//
+
+
 #ifndef POSTFIXCAL_H
 #define POSTFIXCAL_H
 

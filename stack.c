@@ -4,9 +4,10 @@ Stack initStack(int size)
 {
     Stack s;
     s = malloc (sizeof (struct myStack));
-    s->array = malloc (sizeof(double) *size );
+    s->array = malloc (sizeof(stack_elem) *size );
     s->size = size;
-   // s->depth = 0;
+    s->depth = 0;
+    return s;
 }
 
 void push (stack_elem v, Stack s)

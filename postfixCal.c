@@ -1,3 +1,12 @@
+// Author: Sheng Wei
+// File Name: postfixCal.c
+// File Description: Source file 
+//
+//
+//
+
+
+
 #include "postfixCal.h"
 
 
@@ -15,8 +24,6 @@ stack_elem postfixCal(char *s, const int stack_size)
     
     struct myStack *my_stack = initStack(stack_size);
     
-
- //   int i;
     char *e, *w = " \t\n\r\f";
 
     for (s = strtok(s, w); s; s = strtok(0, w))
@@ -24,21 +31,18 @@ stack_elem postfixCal(char *s, const int stack_size)
         a = strtod(s, &e);
         if (e > s)
              push(a, my_stack);
-#define binop(x)  b = pop(my_stack), a = pop(my_stack), push(x, my_stack)
     else if (*s == '+')
     {
         b = pop(my_stack);
         a = pop(my_stack);
         push(a+b, my_stack);
     }
-    //binop(a + b);
     else if (*s == '-')
     {
         b = pop(my_stack);
         a = pop(my_stack);
         push(a-b, my_stack);
     }
-    //binop(a - b);
     else if (*s == '*') 
     {
         b = pop(my_stack);
@@ -51,15 +55,11 @@ stack_elem postfixCal(char *s, const int stack_size)
         a = pop(my_stack);
         push(a/b, my_stack);
     }
-   // binop(a / b);
-#undef binop
     else
     {
         fprintf(stderr, "'%c:'", *s);
         terminate("ERROR: WRONG OPERATOR, PLEASE ENTER + - * /\n");
     }
-   // for (i = my_stack->depth; i-- || 0 * putchar('\n');)
-     //   printf(" %g", my_stack->array[i]);
 
     }
     if (my_stack->depth != 1)

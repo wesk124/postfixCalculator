@@ -13,7 +13,7 @@ struct myStack
     int size;
     int depth;
     stack_elem *array;
-}; // typed defien stack;
+}; // defined type stack;
 
 Stack initStack(int size);
 
