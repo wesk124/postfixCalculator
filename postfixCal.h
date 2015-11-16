@@ -4,18 +4,12 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+#include <stdio.h>
 #include "stack.h"
 
-
-void terminate(const char* err);
+void terminate(const char *err);
 
 stack_elem postfixCal(char *s, const int stack_size);
-
-
-
-
-
 
 
 #endif
