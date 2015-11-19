@@ -4,7 +4,7 @@ Stack initStack(int size)
 {
     Stack s;
     s = malloc (sizeof (struct myStack));
-    s->array = malloc (sizeof(stack_elem) *size );
+    s->array = malloc (sizeof(stack_elem) *size* 4 );
     s->size = size;
     s->depth = 0;
     return s;

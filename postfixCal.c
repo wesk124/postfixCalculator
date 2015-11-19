@@ -18,10 +18,12 @@ void terminate(const char* err)
     exit(0);
 }
 
-stack_elem postfixCal(char *s, const int stack_size)
+stack_elem postfixCal(char *s)
 {
     stack_elem a, b;
-    
+   
+    int stack_size  = strlen(s);  
+
     struct myStack *my_stack = initStack(stack_size);
     
     char *e, *w = " \t\n\r\f";

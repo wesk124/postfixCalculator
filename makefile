@@ -1,6 +1,5 @@
 all: rpn
 
-
 rpn: main.o stack.o postfixCal.o
 	gcc main.o stack.o postfixCal.o -o rpn
 

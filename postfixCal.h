@@ -18,7 +18,7 @@
 
 void terminate(const char *err);
 
-stack_elem postfixCal(char *s, const int stack_size);
+stack_elem postfixCal(char *s);
 
 
 #endif

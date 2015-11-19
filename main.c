@@ -11,14 +11,15 @@
 #include <assert.h>
 #include "stack.h"
 #include "postfixCal.h"
-#define MAXSIZE 100
+
+#define MAXSIZE 256
 
 int main()
 {
 
-    char in_str [256];
-    fgets (in_str, 256, stdin);
-    printf("%g\n", postfixCal(in_str, MAXSIZE));
+    char in_str [MAXSIZE];
+    fgets (in_str, MAXSIZE, stdin);
+    printf("%g\n", postfixCal(in_str));
 
 
     return 0;
